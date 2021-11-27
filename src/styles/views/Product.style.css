@@ -1,0 +1,14 @@
+.container-product {
+    @apply flex flex-row;
+    height: 91vh;
+}
+.information-about-product {
+    @apply w-2/4 box-border border-l;
+    height: 100%;
+}
+.container-img-product {
+    @apply w-1/2 relative;
+}
+.img-product-information {
+    @apply h-full absolute object-cover
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@100&family=Roboto:wght@700&family=Rubik:wght@300&display=swap');
+
+.container-item-product {
+    @apply p-1 m-2.5 border-2 rounded-md bg-white;
+    width: 18%;
+    height: 50vh;
+}
+.img-product {
+    @apply w-full flex items-center justify-center box-border;
+    height: 70%;
+}
+.img-product img {
+    @apply w-full h-full object-cover
+}
+.information-product {
+    @apply w-full overflow-hidden p-1 box-border text-center  border-t-2 bg-transparent;
+    height: 30%;
+}
+.information-basic {
+    @apply w-full flex  justify-between
+}
+.container-btn-to-buy {
+    @apply w-1/2
+}

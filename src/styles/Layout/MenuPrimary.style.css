@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@700&display=swap');
+
+.container-menu-primary {
+    @apply w-full;
+}
+.menu-primary {
+    @apply bg-white;
+    height: 9vh;
+}
+.nav-menu {
+    @apply h-full
+}
+.list-menu {
+    @apply h-full flex flex-row
+}
+.element-link-primary-title {
+    @apply w-1/2 flex items-center
+}
+.element-link-primary-title a {
+    @apply text-2xl;
+    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.element-link-primary {
+    @apply w-1/2 flex items-center justify-end 
+}
+.element-link-primary a {
+    @apply  text-lg font-semibold p-1 box-border m-1
+}
+.indexs-products {
+    @apply  text-white bg-blue-400 rounded
+}

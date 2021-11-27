@@ -1,0 +1,3 @@
+.container-list-product {
+    @apply flex flex-row flex-wrap justify-center mt-3
+}

@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+
+// react-router-dom
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+
+// provider of context
+import { ProductsProvider } from './contexts/ProductsContext';
+
+// Layout
+import MenuPrimary from './layout/MenuPrimary';
+
+// views
+import Home from './views/Home';
+import Card from './views/Card';
+import ProfileUser from './views/ProfileUser';
+import Product from './views/Product';
+import { CardProvider } from './contexts/CardContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <ProductsProvider> 
+      <CardProvider>
+        <Router>
+          <MenuPrimary> 
+            <Routes> 
+              <Route exact path='/' index element={<Home />} /> 
+              <Route exact path='/card' element={<Card />} />
+              <Route exact path='/profile/:name' element={<ProfileUser />} />
+              <Route exact path='/product/:model/:id' element={<Product />} />
+            </Routes>
+          </MenuPrimary>
+        </Router>
+      </CardProvider>
+    </ProductsProvider>
+
     </div>
   );
 }
