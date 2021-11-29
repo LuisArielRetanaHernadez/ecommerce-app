@@ -12,26 +12,29 @@ import '../styles/views/Product.style.css'
 import InformationProduct from '../components/Product/InformationProduct';
 
 const Product = () => {
-    const [productInformation, setProductInformation] = useState([])
+    const [productInformation, setProductInformation] = useState({})
 
     const dataProduct = useParams()
-
     const {state} = useContext(ProductsContext)
+    console.log(state)
 
     useEffect(()=> {
-        setProductInformation(state.filter(product => product.id === dataProduct.id || product.model === dataProduct.model))
-    },[dataProduct, state])
+        if(Object.keys(dataProduct).length >= 1 && state.products.length >= 1){
+            setProductInformation(...state.products.filter(itemProduct => itemProduct.id === parseInt(dataProduct.id)))
+            console.log()
+        }
+    },[dataProduct, state.products])
 
-    console.log(productInformation)
+    console.log('id', productInformation)
 
     return (
     
         <div className='container-product'>
             <div className='container-img-product'>
-                <img className='img-product-information' src={productInformation[0]?.imgPrimary} alt={`imagen de la computadora ${productInformation[0]?.model}`} />
+                <img className='img-product-information' src={productInformation?.imgPrimary} alt={`imagen de la computadora ${productInformation?.model}`} />
             </div>
             <div className='information-about-product'>
-                <InformationProduct product={productInformation} />
+                {Object.keys(productInformation).length >= 1  && <InformationProduct product={productInformation} /> }
             </div>
             
         </div>

@@ -1,10 +1,18 @@
+// react-hooks
+import { useContext } from "react"
+
 // react-router-dom
 import { Link } from "react-router-dom"
+
+// context
+import CardContext from "../contexts/CardContext"
 
 // estilos del comoponente MenuPrimary
 import '../styles/Layout/MenuPrimary.style.css'
 
 const MenuPrimary = ({children}) => {
+
+    const {state} = useContext(CardContext)
 
     return (
     <div  className='container-menu-primary'> 
@@ -15,7 +23,7 @@ const MenuPrimary = ({children}) => {
                         <Link to='/' >MonsterPc</Link>
                     </div>
                     <div className='element-link-primary p-2 box-border'>
-                        <Link to='/card' >card <span className='indexs-products'>2</span> </Link>
+                        <Link to='/card' >card <span className='indexs-products'>{state.amountProduct}</span> </Link>
                         <Link to='/login' >Login</Link>
                     </div>
                 </ul>

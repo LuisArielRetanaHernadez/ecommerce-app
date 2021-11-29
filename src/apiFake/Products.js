@@ -30,7 +30,7 @@ export const products = [
             }
         ],
         qualification: 4.5,
-        tokens: 45,
+        tokens: 5,
         
     },
     {
@@ -174,7 +174,7 @@ export const products = [
         model: "MacBook Air",
         price: 75000,
         mark: "apple",
-        imgPrimary: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gallery1-20201110_GEO_MX?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1613174019000', 
+        imgPrimary: 'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gallery4-20201110?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1603399116000', 
         imgs: [
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gallery1-20201110_GEO_MX?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1613174019000',
             'https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-gallery2-20201110?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1603399116000',

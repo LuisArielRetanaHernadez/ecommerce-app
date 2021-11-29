@@ -15,7 +15,7 @@ import MenuPrimary from './layout/MenuPrimary';
 
 // views
 import Home from './views/Home';
-import Card from './views/Card';
+import Cart from './views/Cart';
 import ProfileUser from './views/ProfileUser';
 import Product from './views/Product';
 import { CardProvider } from './contexts/CardContext';
@@ -30,7 +30,7 @@ function App() {
           <MenuPrimary> 
             <Routes> 
               <Route exact path='/' index element={<Home />} /> 
-              <Route exact path='/card' element={<Card />} />
+              <Route exact path='/card' element={<Cart />} />
               <Route exact path='/profile/:name' element={<ProfileUser />} />
               <Route exact path='/product/:model/:id' element={<Product />} />
             </Routes>

@@ -8,7 +8,7 @@ module.exports = {
       'blue_secondary': '#091353',
       'caffe_secondary': '#444941',
       'purple_secondary': '#261C2C',
-      'white_neon': '#3F6F6F6',
+      'white_neon': '#F6F6F6',
       'danger': '#e3342f',
      }),
      borderColor: theme => ({

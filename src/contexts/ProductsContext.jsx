@@ -7,8 +7,17 @@ import { products } from "../apiFake/Products";
 // create context
 const ProductsContext = createContext();
 
+const initialState = {
+    products: products
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
+        case 'DECREAEE_TOKEN_PRODUCT':
+            return {
+                ...state,
+                state: state.products.map(product => product === action.payload.id ? action.payload.product: state.products.product)
+            }
         default:
             return state
     }
@@ -16,7 +25,7 @@ const reducer = (state, action) => {
 
 const ProductsProvider = ({children}) => {
 
-    const [state, dispatch] = useReducer(reducer, products )
+    const [state, dispatch] = useReducer(reducer, initialState )
 
     const data = {
         state,

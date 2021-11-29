@@ -11,15 +11,16 @@ import { Link } from "react-router-dom";
 const HeaderPrimary = () => {
 
     const {state} = useContext(ProductsContext)
+    const product = state.products[0]
     return (
     
         <header className="header-primary">
           <div className='container-slider'>
             <div className='slider'>
               <div className='element-slider'>
-                <img className='img-slider' src={state[0].imgs[2]} alt={`imagen de la computadora ${state[0].model} `}/>
+                <img className='img-slider' src={product?.imgs[2]} alt={`imagen de la computadora ${product.model} `}/>
                 <div className='information-element'> 
-                  <h2> {state[0].model} </h2>
+                  <h2> {product?.model} </h2>
                   <div className='description-element'>
                     {/* <p> {state[0].textDesciption.text} </p> */}
                     <p>
@@ -29,8 +30,8 @@ const HeaderPrimary = () => {
                 </div>
 
                 <div className='more-information-link'> 
-                    <h2 className='text-center' > {state[0].model} <hr className='border-2' /> </h2>
-                    <Link className='link-information-product' to={`/product/${state[0].model}/${state[0].id}`}>Ir a Producto</Link>
+                    <h2 className='text-center' > {product?.model} <hr className='border-2' /> </h2>
+                    <Link className='link-information-product' to={`/product/${product?.model}/${product?.id}`}>Ir a Producto</Link>
                 </div>
 
               </div>

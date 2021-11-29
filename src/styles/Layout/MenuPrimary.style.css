@@ -4,7 +4,7 @@
     @apply w-full;
 }
 .menu-primary {
-    @apply bg-white;
+    @apply w-full bg-white;
     height: 9vh;
 }
 .nav-menu {

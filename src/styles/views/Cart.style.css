@@ -1,0 +1,29 @@
+.container-cart {
+    min-height: 91vh;
+}
+.container-total-price {
+    @apply flex flex-row justify-between p-1 mb-2 bg-caffe_secondary;
+    height: 5vh;
+    width: 100%;
+}
+.container-total-price div {
+    min-height: 50%;
+    min-width: 10%;
+}
+.total-price {
+    @apply border-b-2;
+    border-color: #D3E4CD;
+    color: #F6F6F6;
+}
+.container-btn-to-buy {
+    /* background-color: #D3E4CD; */
+    @apply rounded;
+    min-height: 50%;
+    width: 15%;
+    background-color: black
+}
+
+.list-product-cart {
+    @apply flex flex-col justify-center items-center;
+    min-height: calc(91vh - 5vh);
+}
