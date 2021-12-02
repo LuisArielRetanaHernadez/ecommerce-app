@@ -45,6 +45,7 @@ const card = (state, action) => {
                 ...state,
                 cart: [],
                 total: 0,
+                amountProduct: 0,
             }
         default:
             return state
